@@ -5,7 +5,6 @@ import '../index.css';
 const googleLensApiKey = process.env.REACT_APP_GOOGLE_LENS_API_KEY;
 const openaiApiKey = process.env.REACT_APP_OPENAI_API_KEY;
 
-
 const App = () => {
   const [imageUrl, setImageUrl] = useState('');
   const [imageInfo, setImageInfo] = useState('');
