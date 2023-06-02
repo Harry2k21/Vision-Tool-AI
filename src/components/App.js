@@ -115,9 +115,7 @@ const App = () => {
           {recipe && (
             <div>
               <h2 className="text-xl font-bold mb-2">Recipe and Nutritional Information:</h2>
-              <pre>
-                <code>{recipe}</code>
-              </pre>
+              <div className="whitespace-pre-wrap break-words">{recipe}</div>
             </div>
           )}
         </div>
