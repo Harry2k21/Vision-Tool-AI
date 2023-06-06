@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../index.css'
+import '../index.css';
 import './App.scss'
 
 // Load environment variables
@@ -7,9 +7,14 @@ const googleLensApiKey = process.env.REACT_APP_GOOGLE_LENS_API_KEY;
 const openaiApiKey = process.env.REACT_APP_OPENAI_API_KEY;
 
 const App = () => {
+  const [darkMode, setDarkMode] = useState(false);
   const [imageUrl, setImageUrl] = useState('');
   const [imageInfo, setImageInfo] = useState('');
   const [recipe, setRecipe] = useState('');
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
 
   const handleImageUpload = async (event) => {
     const file = event.target.files[0];
@@ -106,8 +111,15 @@ const App = () => {
 
 
   return (
-    
-    <div className="min-h-screen bg-blue-100 py-6 flex flex-col justify-center sm:py-12">
+    <div className={darkMode ? "bg-gray-800 min-h-screen" : "bg-gray-100 min-h-screen"}>
+    <div className={"p-6 flex flex-col justify-center"}>
+      <button
+        onClick={toggleDarkMode}
+        className={"bg-blue-500 text-white px-4 py-2 rounded mb-6"}
+      >
+        {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+      </button></div>
+      <div className="min-h-screen bg-blue-100 py-6 flex flex-col justify-center sm:py-12">
       <div class="container" id="load">
   <div class="cube">
     <div class="sides">
@@ -121,6 +133,7 @@ const App = () => {
   </div>
   <div class="text">BUNDLING DEPENDENCIES</div>
 </div>
+    <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
       <div className="relative py-3 sm:max-w-xl sm:mx-auto">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-light-blue-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
         <div className=" w-200 md:w-200 lg:w-200 relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
@@ -135,6 +148,8 @@ const App = () => {
               <div></div>
             </div>
           )}
+          </div>
+          </div>
         </div>
       </div>
     </div>
