@@ -22,6 +22,11 @@ Link to deployed application:
 
 
 ## Technologies Used
+- React
+- Tailwind
+- Google Lens API
+- OpenAI API
+- Netlify
 
 
 
