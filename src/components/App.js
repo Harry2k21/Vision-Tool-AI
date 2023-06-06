@@ -14,12 +14,14 @@ const App = () => {
   const [imageUrl, setImageUrl] = useState('');
   const [imageInfo, setImageInfo] = useState('');
   const [recipe, setRecipe] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
 
   const handleImageUpload = async (event) => {
+    setIsLoading(true);
     const file = event.target.files[0];
     const reader = new FileReader();
 
@@ -107,11 +109,11 @@ const App = () => {
   
       const data = await response.json();
       setRecipe(data.choices[0].message.content);
+      setIsLoading(false);
     } catch (error) {
       console.error('Error:', error);
     }
   };
-
 
   return (
     <Router>
@@ -126,6 +128,7 @@ const App = () => {
               imageUrl={imageUrl}
               recipe={recipe}
               darkMode={darkMode}
+              isLoading={isLoading}
             />
           }
         />

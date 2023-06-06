@@ -1,10 +1,11 @@
 import React from "react";
 
-function HomePage({ darkMode, handleImageUpload, imageUrl, recipe }) {
-    return (
-      <div
-        className={`min-h-screen py-6 flex flex-col justify-center sm:py-12 ${
-          darkMode ? "bg-gray-900" : "bg-white-100"}`}>
+function HomePage({ darkMode, handleImageUpload, imageUrl, recipe, isLoading }) {
+  return (
+    <div
+      className={`min-h-screen py-6 flex flex-col justify-center sm:py-12 ${
+        darkMode ? "bg-gray-900" : "bg-white-100"}`}>
+      {isLoading && (
         <div class="container" id="load">
           <div class="cube">
             <div class="sides">
@@ -14,10 +15,11 @@ function HomePage({ darkMode, handleImageUpload, imageUrl, recipe }) {
               <div class="left"></div>
               <div class="front"></div>
               <div class="back"></div>
-          </div>
+            </div>
           </div>
           <div class="text">Loading</div>
         </div>
+      )}
         <div className="relative py-3 sm:max-w-xl sm:mx-auto">
           <div
             className={`absolute inset-0 ${
