@@ -1,10 +1,39 @@
 import React from "react";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
-function HomePage({ darkMode, handleImageUpload, imageUrl, recipe }) {
-    return (
-      <div
-        className={`min-h-screen py-6 flex flex-col justify-center sm:py-12 ${
-          darkMode ? "bg-gray-900" : "bg-white-100"}`}>
+// Handles the save recipe action
+const handleSaveRecipe = (recipe) => {
+  const element = document.createElement("a");
+  const file = new Blob([recipe], { type: "text/plain" });
+  element.href = URL.createObjectURL(file);
+  element.download = "recipe.txt";
+  document.body.appendChild(element);
+  element.click();
+};
+
+// Add this function to handle the share recipe action
+const handleShareRecipe = async (recipe) => {
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: "Shared Recipe",
+        text: recipe,
+      });
+      console.log("Sharing was successful!");
+    } catch (error) {
+      console.log("Sharing failed:", error);
+    }
+  } else {
+    console.log("Web Share API not supported in this browser.");
+  }
+};
+
+function HomePage({ darkMode, handleImageUpload, imageUrl, recipe, isLoading }) {
+  return (
+    <div
+      className={`min-h-screen py-6 flex flex-col justify-center sm:py-12 ${
+        darkMode ? "bg-gray-900" : "bg-white-100"}`}>
+      {isLoading && (
         <div class="container" id="load">
           <div class="cube">
             <div class="sides">
@@ -14,10 +43,11 @@ function HomePage({ darkMode, handleImageUpload, imageUrl, recipe }) {
               <div class="left"></div>
               <div class="front"></div>
               <div class="back"></div>
-          </div>
+            </div>
           </div>
           <div class="text">Loading</div>
         </div>
+      )}
         <div className="relative py-3 sm:max-w-xl sm:mx-auto">
           <div
             className={`absolute inset-0 ${
@@ -54,6 +84,21 @@ function HomePage({ darkMode, handleImageUpload, imageUrl, recipe }) {
                 <div className="whitespace-pre-wrap break-words">{recipe}</div>
               </div>
             )}
+            <button
+                onClick={() => handleSaveRecipe(recipe)}
+                className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              >
+                Save Recipe
+              </button>
+              <button
+              onClick={() => handleShareRecipe(recipe)}
+              className="mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+              >
+              Share Recipe
+              </button>
+            <div className="scroll-to-top-button-container">
+            <ScrollToTopButton />
+            </div>
           </div>
         </div>
       </div>
