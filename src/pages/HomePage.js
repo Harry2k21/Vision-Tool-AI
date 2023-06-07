@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 function HomePage({ darkMode, handleImageUpload, imageUrl, recipe, isLoading }) {
   return (
@@ -56,6 +57,9 @@ function HomePage({ darkMode, handleImageUpload, imageUrl, recipe, isLoading }) 
                 <div className="whitespace-pre-wrap break-words">{recipe}</div>
               </div>
             )}
+            <div className="scroll-to-top-button-container">
+            <ScrollToTopButton />
+            </div>
           </div>
         </div>
       </div>
