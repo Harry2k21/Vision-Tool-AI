@@ -1,6 +1,16 @@
 import React from "react";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 
+// Handles the save recipe action
+const handleSaveRecipe = (recipe) => {
+  const element = document.createElement("a");
+  const file = new Blob([recipe], { type: "text/plain" });
+  element.href = URL.createObjectURL(file);
+  element.download = "recipe.txt";
+  document.body.appendChild(element);
+  element.click();
+};
+
 function HomePage({ darkMode, handleImageUpload, imageUrl, recipe, isLoading }) {
   return (
     <div
@@ -57,6 +67,12 @@ function HomePage({ darkMode, handleImageUpload, imageUrl, recipe, isLoading }) 
                 <div className="whitespace-pre-wrap break-words">{recipe}</div>
               </div>
             )}
+            <button
+                onClick={() => handleSaveRecipe(recipe)}
+                className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              >
+                Save Recipe
+              </button>
             <div className="scroll-to-top-button-container">
             <ScrollToTopButton />
             </div>

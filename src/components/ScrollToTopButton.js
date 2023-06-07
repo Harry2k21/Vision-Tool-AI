@@ -38,8 +38,6 @@ const ScrollToTopButton = () => {
     <div>
       {
         <p className="mb-4">
-          Upload an image to get a recipe and nutritional information based on
-          the image's content.
         </p>
       }
       <button onClick={handleScrollToTop} style={buttonStyle}>
