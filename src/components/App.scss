@@ -47,7 +47,8 @@ $size: 150px;
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: white;
+  background-color: rgb(227, 228, 241);
+
 }
 
 .container {
@@ -87,7 +88,7 @@ body {
 .cube .sides * {
   box-sizing: border-box;
   background-color: rgba(197, 116, 230, 0.5);
-  border: $size / 10 solid white;
+  border: $size / 10 solid rgb(255, 255, 255);
 }
 
 @mixin side($name, $rotate, $i) {
@@ -120,7 +121,7 @@ body {
 
 .text {
   margin-top: $size * 3;
-  color: rgba(242, 119, 119, 1);
+  color: rgba(197, 116, 230, 1);
   font-size: 1.5rem;
   width: 100%;
   font-weight: 600;
