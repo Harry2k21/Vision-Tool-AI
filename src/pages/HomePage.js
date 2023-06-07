@@ -11,6 +11,23 @@ const handleSaveRecipe = (recipe) => {
   element.click();
 };
 
+// Add this function to handle the share recipe action
+const handleShareRecipe = async (recipe) => {
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: "Shared Recipe",
+        text: recipe,
+      });
+      console.log("Sharing was successful!");
+    } catch (error) {
+      console.log("Sharing failed:", error);
+    }
+  } else {
+    console.log("Web Share API not supported in this browser.");
+  }
+};
+
 function HomePage({ darkMode, handleImageUpload, imageUrl, recipe, isLoading }) {
   return (
     <div
@@ -72,6 +89,12 @@ function HomePage({ darkMode, handleImageUpload, imageUrl, recipe, isLoading }) 
                 className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
               >
                 Save Recipe
+              </button>
+              <button
+              onClick={() => handleShareRecipe(recipe)}
+              className="mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+              >
+              Share Recipe
               </button>
             <div className="scroll-to-top-button-container">
             <ScrollToTopButton />
