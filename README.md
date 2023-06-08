@@ -32,9 +32,12 @@ Users can upload their ingredient image using the "Browse" button, once the imag
 
 Screenshot of the app homepage: 
 
+![Vision AI - Image to Recipe Analysis](./src/assets/images/AI%20home%20page.png)
 
 
-Example of an ingredient search plus nutritional information: 
+
+Example of an ingredient search plus nutritional information:
+![Vision AI - Image to Recipe Analysis](./src/assets/images/Home-page-with-image-upload-light.png) 
 
 
 
