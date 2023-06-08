@@ -37,10 +37,13 @@ Example of an ingredient search plus nutritional information:
 
 ## Technologies Used
 - React
-- Tailwind
+- Node.js
+- Tailwind CSS
+- SCSS for the Loading Animation
+- ES6
 - Google Lens API
 - OpenAI API
-- Netlify
+- Netlify for Deployment
 - WebShare API
 
 ## Credits
