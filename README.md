@@ -30,12 +30,11 @@ Link to deployed application: https://main--eclectic-kringle-05e268.netlify.app/
 Users can upload their ingredient image using the "Browse" button, once the image is uploaded a recipe will displayed on the page with the nutritional information below.
 
 
-Screenshot of the app homepage:
-![Image1](./assets/images/...)
+Screenshot of the app homepage: 
 
 
-Example of an ingredient search plus nutritional information:
-![Image2](./assets/images/...)
+
+Example of an ingredient search plus nutritional information: 
 
 
 
