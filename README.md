@@ -1,5 +1,5 @@
 # Vision AI - Image to Recipe Analysis
-![](./src/assets/images/logo.png) ![](./src/assets/images/logo1.png) ![](./src/assets/images/logo1.png) ![](./src/assets/images/logo1.png) ![](./src/assets/images/logo.png) 
+![](./src/assets/images/logo.png) ![](./src/assets/images/logo1.png) ![](./src/assets/images/logo1.png)  ![](./src/assets/images/logo.png) 
 
 ## User Story <br> 
 AS AN individual interested in using up-to-date AI technologies and cooking 
@@ -64,7 +64,7 @@ The University of Birmingham: https://www.birmingham.ac.uk/index.aspx
 License
 There is no license specified for this project.
 
-![](./src/assets/images/logo.png)  ![](./src/assets/images/logo1.png) ![](./src/assets/images/logo1.png) ![](./src/assets/images/logo1.png) ![](./src/assets/images/logo.png) 
+![](./src/assets/images/logo.png)  ![](./src/assets/images/logo1.png) ![](./src/assets/images/logo1.png) ![](./src/assets/images/logo.png) 
 
 
 
