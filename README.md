@@ -52,10 +52,10 @@ Example of an ingredient search plus nutritional information:
 This Project was created by Project Team 5 with Birmingham University as part of the Intensive 16-Week Front End Web Developent Bootcamp.
 
 The Team Members are:
-Harry Parker
-Maria Sameen
-Jean Chan
-Lee Webb
+Harry Parker,
+Maria Sameen,
+Jean Chan,
+Lee Webb.
 
 We'd like to thank Roger Le the Instructor for this Bootcamp as well as Tiffany Rose and the support staff who have provided an incredible amount of support to get us where we are today.
 
