@@ -25,12 +25,12 @@ const ScrollToTopButton = () => {
     bottom: "25px",
     right: "25px",
     zIndex: "999",
-    backgroundColor: "pink",
+    backgroundColor: "#c08cf4",
     borderRadius: '26%', 
     width: '40px',
     height: '40px',
     border: 'none',
-    color: 'black',
+    color: 'white',
     fontSize: '16px',
   };
 

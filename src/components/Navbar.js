@@ -1,4 +1,6 @@
 import React from "react";
+import logo from "../assets/images/logo.png"
+import '../components/Navbar.css'
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
     return (
@@ -8,8 +10,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         }`}
       >
         <div>
-          <span className={"font-bold text-xl"}>Vision AI</span>
+          <span className={"font-bold text-xl"}>Vision AI </span>
         </div>
+        <div><img id="logo" src={logo} alt="vlogo" /></div>
+        
         <div>
           <button
             onClick={toggleDarkMode}
