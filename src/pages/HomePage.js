@@ -114,13 +114,13 @@ function HomePage({ darkMode, handleImageUpload, imageUrl, recipe, isLoading }) 
                   {/* Save and share recipe buttons */}
                   <button
                     onClick={() => handleSaveRecipe(recipe)}
-                    className="mt-4 bg-purple-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
+                    className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
                   >
                     Save Recipe
                   </button>
                   <button
                     onClick={() => handleShareRecipe(recipe)}
-                    className="mt-4 bg-purple-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                    className="mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
                   >
                     Share Recipe
                   </button>

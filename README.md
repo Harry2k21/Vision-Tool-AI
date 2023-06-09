@@ -31,7 +31,6 @@ Screenshot of the app homepage:
 ![Vision AI - Image to Recipe Analysis](./src/assets/images/AI%20home%20page.png)
 
 
-
 Example of an ingredient search plus nutritional information:
 ![Vision AI - Image to Recipe Analysis](./src/assets/images/Home-page-with-image-upload-light.png) 
 
@@ -64,7 +63,4 @@ The University of Birmingham: https://www.birmingham.ac.uk/index.aspx
 License
 There is no license specified for this project.
 
-![](./src/assets/images/logo.png)  ![](./src/assets/images/logo1.png) ![](./src/assets/images/logo1.png) ![](./src/assets/images/logo.png) 
-
-
-
+![](./src/assets/images/logo.png)  ![](./src/assets/images/logo1.png) ![](./src/assets/images/logo1.png) ![](./src/assets/images/logo.png)
