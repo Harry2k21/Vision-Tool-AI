@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "../components/Navbar.js";
-import HomePage from "../pages/HomePage.js";
+import Navbar from "../components/Navbar";
+import HomePage from "../pages/HomePage";
 import "../index.css";
-import "./App.scss";
+import "./App.css";
 
 // Load environment variables
 const googleLensApiKey = process.env.REACT_APP_GOOGLE_LENS_API_KEY;

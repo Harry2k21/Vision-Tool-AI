@@ -1,0 +1,249 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#load {
+  position: fixed;
+  top: 300px;
+  justify-content: center;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(227, 228, 241);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 50%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(-37.5deg) rotateY(45deg);
+  }
+  50% {
+    transform: rotateX(-37.5deg) rotateY(405deg);
+  }
+  100% {
+    transform: rotateX(-37.5deg) rotateY(405deg);
+  }
+}
+
+.cube,
+.cube * {
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+}
+
+@media (min-width: 640px) {
+  .cube {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .cube {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cube {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .cube {
+    width: 14rem;
+    height: 14rem;
+  }
+}
+
+.sides {
+  animation: rotate 3s ease infinite 0.8s;
+  transform-style: preserve-3d;
+  transform: rotateX(-37.5deg) rotateY(45deg);
+}
+
+.cube .sides * {
+  box-sizing: border-box;
+  background-color: rgba(197, 116, 230, 0.5);
+  border: 15px solid rgb(255, 255, 255);
+}
+
+.cube .sides .top,
+.cube .sides .bottom,
+.cube .sides .front,
+.cube .sides .back,
+.cube .sides .left,
+.cube .sides .right {
+  animation-fill-mode: forwards;
+  transform-origin: 50% 50%;
+}
+
+.cube .sides .top {
+  animation: top-animation 3s ease infinite;
+  transform: rotateX(90deg) translateZ(75px);
+}
+
+.cube .sides .bottom {
+  animation: bottom-animation 3s ease infinite;
+  transform: rotateX(-90deg) translateZ(75px);
+}
+
+.cube .sides .front {
+  animation: front-animation 3s ease infinite;
+  transform: rotateY(0deg) translateZ(75px);
+}
+
+.cube .sides .back {
+  animation: back-animation 3s ease infinite;
+  transform: rotateY(-180deg) translateZ(75px);
+}
+
+.cube .sides .left {
+  animation: left-animation 3s ease infinite;
+  transform: rotateY(-90deg) translateZ(75px);
+}
+
+.cube .sides .right {
+  animation: right-animation 3s ease infinite;
+  transform: rotateY(90deg) translateZ(75px);
+}
+
+@keyframes top-animation {
+  0% {
+    opacity: 1;
+    transform: rotateX(90deg) translateZ(75px);
+  }
+  20%, 70% {
+    opacity: 1;
+    transform: rotateX(90deg) translateZ(37.5px);
+  }
+  90%, 100% {
+    opacity: 1;
+    transform: rotateX(90deg) translateZ(75px);
+  }
+}
+
+@keyframes bottom-animation {
+  0% {
+    opacity: 1;
+    transform: rotateX(-90deg) translateZ(75px);
+  }
+  20%, 70% {
+    opacity: 1;
+    transform: rotateX(-90deg) translateZ(37.5px);
+  }
+  90%, 100% {
+    opacity: 1;
+    transform: rotateX(-90deg) translateZ(75px);
+  }
+}
+
+@keyframes front-animation {
+  0% {
+    opacity: 1;
+    transform: rotateY(0deg) translateZ(75px);
+  }
+  20%, 70% {
+    opacity: 1;
+    transform: rotateY(0deg) translateZ(37.5px);
+  }
+  90%, 100% {
+    opacity: 1;
+    transform: rotateY(0deg) translateZ(75px);
+  }
+}
+
+@keyframes back-animation {
+  0% {
+    opacity: 1;
+    transform: rotateY(-180deg) translateZ(75px);
+  }
+  20%, 70% {
+    opacity: 1;
+    transform: rotateY(-180deg) translateZ(37.5px);
+  }
+  90%, 100% {
+    opacity: 1;
+    transform: rotateY(-180deg) translateZ(75px);
+  }
+}
+
+@keyframes left-animation {
+  0% {
+    opacity: 1;
+    transform: rotateY(-90deg) translateZ(75px);
+  }
+  20%, 70% {
+    opacity: 1;
+    transform: rotateY(-90deg) translateZ(37.5px);
+  }
+  90%, 100% {
+    opacity: 1;
+    transform: rotateY(-90deg) translateZ(75px);
+  }
+}
+
+@keyframes right-animation {
+  0% {
+    opacity: 1;
+    transform: rotateY(90deg) translateZ(75px);
+  }
+  20%, 70% {
+    opacity: 1;
+    transform: rotateY(90deg) translateZ(37.5px);
+  }
+  90%, 100% {
+    opacity: 1;
+    transform: rotateY(90deg) translateZ(75px);
+  }
+}
