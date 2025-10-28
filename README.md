@@ -18,7 +18,7 @@ Additionally, the app offers a choice between light and dark mode, allowing user
 
 ## Installation
 
-Link to deployed application: vision-ai-tool.netlify.app
+Link to deployed application: [vision-ai-tool.netlify.app](https://vision-ai-tool.netlify.app/)
 
 
 ## Usage 
